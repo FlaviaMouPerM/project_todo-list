@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project-todo-list-vite</title>
+  </head>
+  <body>
+    <section class="todo-list">
+      <div class="organization">
+        <aside class="side-bar">
+          <h1 class="title-side-bar">Todo List</h1>
+          <button id="btn-side-bar">Project</button>
+          <nav class="projeto">
+            <ul>
+              <li></li>
+             
+            </ul>
+          </nav>
+        </aside>
+        <section class="content">
+          <header>
+            <div class="top">
+              <h1 class="list-top">Lista de tarefas</h1>
+              <button class="task-btn">+ New task</button>
+            </div>
+          </header>
+          <div class="status-task">
+            <section class="status">
+              <div class="dash-cards">
+                <div class="card"><p class="result">1</p></div>
+                <div class="card"><p class="result">2</p></div>
+                <div class="card"><p class="result">3</p></div>
+                <div class="card card_porcent"><p class="result ">4</p></div>
+              </div>
+            </section>
+            <section class="task-list">
+              <article class="task">
+                <div class="article_tesk">
+                <p>texto aqui</p> 
+                <div>
+                <button class="delete-task btn_article">Delete</button>
+                <button class="edit-task btn_article">Edit</button>
+                <button class="complete-task btn_article">Complete</button>
+                </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </section>
+      </div>
+    </section>
+    //================================================
+    <dialog class="modal_create_project">
+      <form class="project_form">
+        <div class="style-form firs_input">
+          <label for="name">Project name</label>
+          <input type="text" id="name" />
+        </div>
+        <div class="style-form description_form">
+          <label for="description">Description</label>
+          <textarea id="description" maxlength="200"></textarea>
+        </div>
+        <div class="color_form">
+          <label for="color" >color</label>
+          <input type="color" id="color" />
+        </div>
+        <div class="btn-submit">
+            <button type="submit" class="send-form">Create</button>
+            <button type="button" class="close-modal">Cancel</button>
+          </div>
+      </form>
+    </dialog>
+    //====================================================
+    <dialog class="tarefa-form">
+      <form action="#">
+        <div>
+          <label for="title">Title</label>
+          <input type="text" id="title" />
+        </div>
+        <div>
+          <label for="task-description">Description</label>
+          <input type="text" id="task-description" />
+        </div>
+        <div>
+          <label for="date">Date</label>
+        </div>
+        <input type="date" id="date" />
+      </form>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

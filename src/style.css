@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.organization {
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.side-bar {
+  background-color: rgb(15, 17, 31);
+  color: rgb(17, 198, 41);
+
+  width: 200px;
+}
+.content {
+  background-color: rgb(34, 34, 35);
+  flex-grow: 1;
+}
+button {
+  width: 80px;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  
+}
+button:hover {
+    background-color: rgb(1, 1, 148);
+    color: white;
+  }
+
+.title-side-bar {
+  text-align: center;
+  text-shadow:
+    0 0 3px #26ff00,
+    0 0 5px #8080c1;
+}
+ul {
+  margin-top: 25px;
+}
+li {
+  margin: 10px 0 0 35px;
+  list-style: none;
+  font-size: 20px;
+}
+#btn-side-bar {
+  margin: 20px 60px;
+  background-color: rgb(0, 255, 174);
+}
+.top {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 5px 0 rgba(119, 119, 119, 0.2);
+}
+.list-top {
+  margin-left: 40px;
+  color: #a7aea6;
+}
+.task-btn {
+  width: 100px;
+  color: rgb(201, 202, 202);
+  font-weight: 750;
+  background-color: rgb(51, 81, 30);
+  margin-right: 90px;
+}
+.status-task {
+  width: 80vw;
+  min-height: 500px;
+  margin: 50px auto auto 50px;
+  border: 1px solid transparent;
+}
+.dash-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  .card {
+    width: 120px;
+    height: 90px;
+    border: 1px solid rgb(47, 44, 44);
+    box-shadow: 0 2px 5px 0 rgba(119, 119, 119, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    .result {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+      font-size: 45px;
+      font-weight: 900;
+      margin-top: 15px;
+      color: #4fff55;
+    }
+  }
+  .card_porcent{
+    width: 170px;
+  }
+}
+.task-list {
+  margin-top: 70px;
+  width: 75vw;
+  min-height: 200px;
+  border: 1px solid transparent;
+}
+.article_tesk {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px 0 rgb(89, 88, 88);
+  border-left: 4px solid #26ff00;
+  p {
+    padding-left: 25px;
+    color: rgb(201, 203, 205);
+  }
+  .btn_article {
+    margin-right: 15px;
+    height: 33px;
+    background-color: #4e4e55;
+    font-weight: 600;
+  }
+  .delete-task {
+    color: rgb(132, 2, 2);
+    &:hover {
+    background-color: rgb(132, 2, 2);
+    color: white;
+  }
+  }
+  .edit-task {
+    color: rgb(8, 62, 237);
+    &:hover {
+    background-color: rgb(8, 62, 237);
+    color: white;
+  }
+}
+  .complete-task {
+    color: rgb(113, 17, 239);
+    &:hover {
+    background-color: rgb(113, 17, 239);
+    color: white;
+  }
+  }
+
+  
+}
+.modal_create_project{
+  background-color: #5b5b5b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  z-index: 5;
+}
+.project_form{
+  width: clamp(300px, 20%, 550px);
+  height: clamp(340px, 30%, 550px);
+  color: rgb(188, 200, 210);
+  border:1px solid black;
+  background-color: #010423;
+  border-radius: 20px;
+  position: fixed;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  .firs_input{
+    margin-top: 15px;
+  }
+  .style-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    gap: 5px;
+    margin-left: 10px;
+  
+
+    input {
+      max-width: 85%;
+      height: 25px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      margin-left: 15px;
+    }
+    input:focus {
+      border: none;
+      outline: none;
+    }
+  }
+  .btn-submit {
+    button {
+      width: clamp(40px, 30%, 80px);
+      height: 30px;
+      margin: 5px 10px 0 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #3b585c;
+      color: aliceblue;
+      font-size: 12px;
+      margin-left: 40px;
+    }
+  }
+  #description{
+    width: 92%;
+    height: 120px;
+    resize: none;
+    border-radius: 8px;
+   
+  }
+  #color{
+    margin: 8px 25px;
+  }
+  .color_form{
+    margin: 15px 0 8px 15px;
+  }
+}
+label{
+  margin-top: 5px;
+}
