@@ -50,6 +50,8 @@ export const selectProject = (name) => {
   selectedProject = todos.projects.find((proj) => proj.name === name);
 };
 
+export const getSelectedProject = () => selectedProject;
+
 export const getProjects = () => todos.projects;
 
 // INTERNAL STATE - TODOS
