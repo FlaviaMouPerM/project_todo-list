@@ -17,11 +17,11 @@ let todos = load();
 let selectedProject = todos.projects[0] ?? null;
 
 // INTERNAL STATE - PROJECTS
-  const adjustName = (name) => {
-    return Object.keys(todos.projects).find(name => name) ? `${name}[0]` : name;
-  };
+const adjustName = (name) => {
+  return Object.keys(todos.projects).find((name) => name) ? `${name}[0]` : name;
+};
 
-const createProject = (name, color) => {
+export const createProject = (name, color) => {
   const finalName = adjustName(name);
   const id = crypto.randomUUID();
 
@@ -33,7 +33,7 @@ const createProject = (name, color) => {
   return selectedProject;
 };
 
-const renameProject = (currentName, newName) => {
+export const renameProject = (currentName, newName) => {
   if (currentName === newName) return;
 
   const finalName = adjustName(newName);
@@ -46,15 +46,15 @@ const renameProject = (currentName, newName) => {
   return currentProject;
 };
 
-const selectProject = (name) => {
+export const selectProject = (name) => {
   selectedProject = todos.projects.find((proj) => proj.name === name);
 };
 
-const getProjects = () => todos.projects;
+export const getProjects = () => todos.projects;
 
 // INTERNAL STATE - TODOS
 
-const createTodo = (text) => {
+export const createTodo = (text) => {
   if (!selectedProject) return;
 
   selectedProject?.todos.push(text);
@@ -64,7 +64,7 @@ const createTodo = (text) => {
   return selectedProject?.todos.at(-1);
 };
 
-const removeTodo = (index) => {
+export const removeTodo = (index) => {
   selectedProject?.todos.splice(index, 1);
 
   save();
@@ -72,7 +72,7 @@ const removeTodo = (index) => {
   return selectedProject.todos;
 };
 
-const updateTodo = (index, newText) => {
+export const updateTodo = (index, newText) => {
   const todo = selectedProject?.todos[index];
   if (!todo) return;
 
@@ -83,4 +83,4 @@ const updateTodo = (index, newText) => {
   return todo;
 };
 
-const getTodos = () => selectedProject.todos;
+export const getTodos = () => selectedProject.todos;
