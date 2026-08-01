@@ -8,8 +8,6 @@ const load = (key = STORAGE_KEY) => {
 };
 
 const save = (key = STORAGE_KEY) => {
-  const current = load();
-
   localStorage.setItem(key, JSON.stringify(todos));
 };
 
