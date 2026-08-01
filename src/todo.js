@@ -16,7 +16,7 @@ let selectedProject = todos.projects[0] ?? null;
 
 // INTERNAL STATE - PROJECTS
 const adjustName = (name) => {
-  return Object.keys(todos.projects).find((name) => name) ? `${name}[0]` : name;
+  return todos.projects.find((name) => name) ? `${name}[0]` : name;
 };
 
 export const createProject = (name, color) => {
